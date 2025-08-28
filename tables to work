@@ -1,0 +1,90 @@
+
+\begin{table}[t]
+\centering
+\small
+\caption{Model comparison with best (bold) and second best (underline) results highlighted per row}
+\label{tab:full_comparison}
+\setlength{\tabcolsep}{4pt}
+\rowcolors{3}{black!3}{white}
+
+\begin{tabular}{l c l l l l l l}
+\toprule
+Dataset & Horizon & \multicolumn{1}{c}{SAMFormer} & \multicolumn{1}{c}{Toto} & \multicolumn{1}{c}{MoiraiBase} & \multicolumn{1}{c}{TimesNet} & \multicolumn{1}{c}{PatchTST} & \multicolumn{1}{c}{DLinear} \\
+\midrule
+ETTh1 & 96 & 0.369/0.393 & \textbf{0.307}/\textbf{0.366} & 0.384/0.402 & 0.386/0.405 & 0.384/0.402 & 0.386/0.400 \\
+ETTh1 & 192 & 0.406/0.417 & \textbf{0.329}/\textbf{0.368} & 0.425/0.429 & 0.441/0.436 & 0.436/0.429 & 0.437/0.432 \\
+ETTh1 & 336 & 0.432/0.434 & \textbf{0.396}/\textbf{0.399} & 0.456/0.450 & 0.487/0.458 & 0.491/0.469 & 0.481/0.459 \\
+ETTh1 & 720 & 0.460/0.469 & \textbf{0.419}/\textbf{0.424} & 0.470/0.473 & 0.503/0.491 & 0.521/0.500 & 0.519/0.516 \\
+\hline
+ETTh2 & 96 & 0.278/0.338 & \textbf{0.093}/\textbf{0.197} & \underline{0.277}/\underline{0.327} & 0.297/0.349 & 0.340/0.374 & 0.333/0.387 \\
+ETTh2 & 192 & 0.372/0.395 & \textbf{0.135}/\textbf{0.231} & \underline{0.340}/\underline{0.374} & 0.380/0.400 & 0.402/0.414 & 0.477/0.476 \\
+ETTh2 & 336 & 0.418/0.433 & \textbf{0.160}/\textbf{0.260} & \underline{0.371}/\underline{0.401} & 0.428/0.432 & 0.452/0.541 & 0.594/0.541 \\
+ETTh2 & 720 & 0.453/0.459 & \textbf{0.294}/\textbf{0.355} & \underline{0.394}/\underline{0.426} & 0.427/0.445 & 0.462/0.657 & 0.831/0.657 \\
+\hline
+ETTm1 & 96 & 0.438/0.465 & \textbf{0.306}/\textbf{0.328} & \underline{0.335}/\underline{0.360} & 0.334/0.368 & 0.338/0.375 & 0.345/0.372 \\
+ETTm1 & 192 & 0.560/0.519 & \textbf{0.328}/\textbf{0.353} & \underline{0.366}/\underline{0.379} & 0.377/0.391 & 0.374/0.387 & 0.380/0.389 \\
+ETTm1 & 336 & 0.704/0.566 & \textbf{0.390}/\textbf{0.389} & \underline{0.391}/\underline{0.394} & 0.426/0.420 & 0.410/0.411 & 0.413/0.413 \\
+ETTm1 & 720 & 0.479/0.475 & \textbf{0.463}/\textbf{0.429} & \underline{0.434}/\underline{0.419} & 0.491/0.459 & 0.478/0.450 & 0.474/0.453 \\
+\hline
+ETTm2 & 96 & 0.647/0.557 & \textbf{0.200}/\textbf{0.270} & \underline{0.195}/\underline{0.269} & 0.180/0.264 & 0.187/0.267 & 0.193/0.292 \\
+ETTm2 & 192 & 0.822/0.637 & \textbf{0.269}/\textbf{0.315} & \underline{0.247}/\underline{0.303} & 0.250/0.309 & 0.249/0.309 & 0.284/0.362 \\
+ETTm2 & 336 & 1.076/0.738 & \textbf{0.264}/\textbf{0.319} & \underline{0.291}/\underline{0.333} & 0.311/0.348 & 0.321/0.351 & 0.369/0.427 \\
+ETTm2 & 720 & 1.421/0.868 & \textbf{0.354}/\textbf{0.374} & \underline{0.355}/\underline{0.377} & 0.412/0.407 & 0.408/0.403 & 0.554/0.522 \\
+\hline
+Exchange & 96 & 0.088/0.206 & -/- & -/- & -/- & -/- & -/- \\
+Exchange & 192 & 0.180/0.300 & -/- & -/- & -/- & -/- & -/- \\
+Exchange & 336 & 0.364/0.432 & -/- & -/- & -/- & -/- & -/- \\
+Exchange & 720 & 0.896/0.711 & -/- & -/- & -/- & -/- & -/- \\
+\hline
+Weather & 96 & 0.168/0.221 & 0.180/0.223 & \textbf{0.167}/\textbf{0.203} & 0.174/0.214 & 0.172/0.220 & 0.196/0.255 \\
+Weather & 192 & 0.212/0.258 & 0.235/0.267 & \textbf{0.209}/\textbf{0.241} & 0.221/0.254 & 0.219/0.261 & 0.237/0.296 \\
+Weather & 336 & 0.256/0.291 & 0.252/0.291 & \textbf{0.256}/\textbf{0.276} & 0.278/0.296 & 0.280/0.306 & 0.283/0.335 \\
+Weather & 720 & 0.320/0.337 & 0.356/0.356 & \textbf{0.321}/\textbf{0.323} & 0.358/0.349 & 0.365/0.359 & 0.345/0.381 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{[WRONG DRAFT]Model comparison with best (bold) and second best (underline) results highlighted per row}
+\label{tab:full_comparison_no_toto}
+\setlength{\tabcolsep}{4pt}
+\rowcolors{3}{black!3}{white}
+
+\begin{tabular}{l c l l l l l}
+\toprule
+Dataset & Horizon & \multicolumn{1}{c}{SAMFormer} & \multicolumn{1}{c}{MoiraiBase} & \multicolumn{1}{c}{TimesNet} & \multicolumn{1}{c}{PatchTST} & \multicolumn{1}{c}{DLinear} \\
+\midrule
+ETTh1 & 96 & 0.369/0.393 & 0.384/0.402 & 0.386/0.405 & 0.384/0.402 & 0.386/0.400 \\
+ETTh1 & 192 & 0.406/0.417 & 0.425/0.429 & 0.441/0.436 & 0.436/0.429 & 0.437/0.432 \\
+ETTh1 & 336 & \textbf{0.432}/\textbf{0.434} & 0.456/0.450 & 0.487/0.458 & 0.491/0.469 & 0.481/0.459 \\
+ETTh1 & 720 & \textbf{0.460}/\textbf{0.469} & \underline{0.470}/\underline{0.473} & 0.503/0.491 & 0.521/0.500 & 0.519/0.516 \\
+\hline
+ETTh2 & 96 & 0.278/0.338 & \textbf{0.277}/\textbf{0.327} & 0.297/0.349 & 0.340/0.374 & 0.333/0.387 \\
+ETTh2 & 192 & 0.372/0.395 & \textbf{0.340}/\textbf{0.374} & 0.380/0.400 & 0.402/0.414 & 0.477/0.476 \\
+ETTh2 & 336 & 0.418/0.433 & \textbf{0.371}/\textbf{0.401} & 0.428/0.432 & 0.452/0.541 & 0.594/0.541 \\
+ETTh2 & 720 & 0.453/0.459 & \textbf{0.394}/\textbf{0.426} & 0.427/0.445 & 0.462/0.657 & 0.831/0.657 \\
+\hline
+ETTm1 & 96 & 0.438/0.465 & \textbf{0.335}/\textbf{0.360} & \underline{0.334}/\underline{0.368} & 0.338/0.375 & 0.345/0.372 \\
+ETTm1 & 192 & 0.560/0.519 & \textbf{0.366}/\textbf{0.379} & \underline{0.377}/\underline{0.391} & 0.374/0.387 & 0.380/0.389 \\
+ETTm1 & 336 & 0.704/0.566 & \textbf{0.391}/\textbf{0.394} & \underline{0.426}/\underline{0.420} & 0.410/0.411 & 0.413/0.413 \\
+ETTm1 & 720 & 0.479/0.475 & \textbf{0.434}/\textbf{0.419} & \underline{0.491}/\underline{0.459} & 0.478/0.450 & 0.474/0.453 \\
+\hline
+ETTm2 & 96 & 0.647/0.557 & \textbf{0.195}/\textbf{0.269} & \underline{0.180}/\underline{0.264} & 0.187/0.267 & 0.193/0.292 \\
+ETTm2 & 192 & 0.822/0.637 & \textbf{0.247}/\textbf{0.303} & \underline{0.250}/\underline{0.309} & 0.249/0.309 & 0.284/0.362 \\
+ETTm2 & 336 & 1.076/0.738 & \textbf{0.291}/\textbf{0.333} & \underline{0.311}/\underline{0.348} & 0.321/0.351 & 0.369/0.427 \\
+ETTm2 & 720 & 1.421/0.868 & \textbf{0.355}/\textbf{0.377} & \underline{0.412}/\underline{0.407} & 0.408/0.403 & 0.554/0.522 \\
+\hline
+Exchange & 96 & \textbf{0.088}/\textbf{0.206} & -/- & -/- & -/- & \underline{0.081}/\underline{0.203} \\
+Exchange & 192 & \textbf{0.180}/\textbf{0.300} & -/- & -/- & -/- & \underline{0.157}/\underline{0.293} \\
+Exchange & 336 & \textbf{0.364}/\textbf{0.432} & -/- & -/- & -/- & \underline{0.305}/\underline{0.414} \\
+Exchange & 720 & \textbf{0.896}/\textbf{0.711} & -/- & -/- & -/- & \underline{0.643}/\underline{0.601} \\
+\hline
+Weather & 96 & 0.168/0.221 & \textbf{0.167}/\textbf{0.203} & \underline{0.174}/\underline{0.214} & 0.172/0.220 & 0.196/0.255 \\
+Weather & 192 & 0.212/0.258 & \textbf{0.209}/\textbf{0.241} & \underline{0.221}/\underline{0.254} & 0.219/0.261 & 0.237/0.296 \\
+Weather & 336 & 0.256/0.291 & \textbf{0.256}/\textbf{0.276} & \underline{0.278}/\underline{0.296} & 0.280/0.306 & 0.283/0.335 \\
+Weather & 720 & 0.320/0.337 & \textbf{0.321}/\textbf{0.323} & \underline{0.358}/\underline{0.349} & 0.365/0.359 & 0.345/0.381 \\
+\bottomrule
+\end{tabular}
+\end{table}
