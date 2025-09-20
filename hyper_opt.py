@@ -23,7 +23,7 @@ DEFAULT_REPO_ROOT = "/home/gsinger"
 if DEFAULT_REPO_ROOT not in sys.path:
     sys.path.append(DEFAULT_REPO_ROOT)
 
-from samformer.samformer_pytorch.samformer.samformer import SAMFormer  # noqa: E402
+from samformer.samformer_pytorch.samformer.samformer import SAMFormer 
 
 
 def set_seeds(seed: int = 1337):
