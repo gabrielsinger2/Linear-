@@ -18,6 +18,7 @@ from lightning.pytorch.callbacks import EarlyStopping, Callback
 from linear_regressor.linear_regression import LinearRegression
 from dotenv import load_dotenv
 
+#The path of the dataset: Clone the repository: git clone https://github.com/SalesforceAIResearch/gift-eval.git and follow the instructions.
 gift_path = "/home/wbouainouche/Samformer_distillation/gift_eval/GiftEval"
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
