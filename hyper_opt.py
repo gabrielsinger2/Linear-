@@ -1,26 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hyperopt script (validation-based selection, then final test) for SAMFormer + LinearForecaster2.
-
-- For each dataset and each prediction horizon:
-  1) Build train/val/test windows.
-  2) Grid-search (or random-search) hyperparameters; pick best by validation MSE.
-  3) Retrain the winner on (train + val) and evaluate on test.
-  4) Append results to CSVs:
-        - hp_search_log.csv   (one row per tried config with val MSE)
-        - hp_selected.csv     (one row per dataset×horizon with chosen params + test MSE)
-
-Notes:
-- Test set is *never* used during selection.
-- Uses your SAMFormer wrapper and LinearForecaster2 network.
-- Defaults target your ETTh1 / ETTm1 paths; tweak below or via CLI.
-
-Usage (examples):
-    python hyperopt_samformer.py
-    python hyperopt_samformer.py --datasets ETTh1 ETTm1 --out_dir /home/gsinger/SamformerDistill/linearWalid
-    python hyperopt_samformer.py --device cuda --epochs 100 --batch_size 256
-
 Author: Singer Gabriel
 """
 import os
